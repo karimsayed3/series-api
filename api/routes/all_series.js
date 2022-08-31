@@ -49,7 +49,6 @@ myRouter.patch('/:id', async (req, res) => {
 
 myRouter.post('/', (req, res) => {
     const product = alrasol_mohamed({
-        id : req.body.id,
         title: req.body.title,
         imgUrl: req.body.imgUrl,
     });

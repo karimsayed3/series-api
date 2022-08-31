@@ -2,7 +2,6 @@ const mongoose = require('mongoose');
 
 const seriesModel = new mongoose.Schema(
     {
-        id : int,
         title : String,
         imgUrl : String,
     }
