@@ -9,6 +9,7 @@ const noah_1 = require('./api/routes/noah');
 const youssef = require('./api/routes/youssef');
 const youssef_2 = require('./api/routes/youssef_2');
 const aflam = require('./api/routes/aflam');
+const all_series = require('./api/routes/all_series');
 
 
 app.use(bodyParser.urlencoded({extended : false}));
@@ -22,5 +23,6 @@ app.use('/youssef_2',youssef_2);
 app.use('/alrasol_mohamed_1',alrasol_mohamed);
 app.use('/alrasol_mohamed_2',alrasol_mohamed_2);
 app.use('/aflam',aflam);
+app.use('/all_series',all_series);
 
 module.exports = app;
