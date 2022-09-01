@@ -25,21 +25,15 @@ myRouter.get('/', async (req, res) => {
     
 
     res.json(
-        {allSerie,
-        alrasol_mohamed_1,
-        alrasol_mohamed_2,
-        kalem_allah_1,
-        kalem_allah_2,
-        youssef_1,
-        youssef_2,
-        noah1}
+        allSerie,
+        
     );
 });
 
 myRouter.get('/:id', async (req, res) => {
 
-    const series = await alrasol_mohamed.findById(req.params.id);
-    res.json(series);
+    const series = await allSeries.findById(req.params.id);
+    res.json(series.seriesName);
 });
 
 //Delete product
@@ -68,9 +62,11 @@ myRouter.patch('/:id', async (req, res) => {
 });
 
 myRouter.post('/', (req, res) => {
-    const product = alrasol_mohamed({
+    const product = allSeries({
+        id : req.body.id,
         title: req.body.title,
-        imgUrl: req.body.imgUrl,
+        backGImg : req.body.backGImg,
+        seriesName: req.body.seriesName,
     });
 
 

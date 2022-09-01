@@ -3,7 +3,9 @@ const mongoose = require('mongoose');
 const seriesModel = new mongoose.Schema(
     {
         title : String,
-        imgUrl : String,
+        id : String,
+        backGImg : String,
+        seriesName : new Object()
     }
 );
 
