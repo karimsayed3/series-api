@@ -33,7 +33,7 @@ myRouter.get('/', async (req, res) => {
 myRouter.get('/:id', async (req, res) => {
 
     const series = await allSeries.findById(req.params.id);
-    res.json(series.seriesName);
+    res.json([series.seriesName]);
 });
 
 //Delete product
