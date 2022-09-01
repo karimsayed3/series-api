@@ -3,12 +3,12 @@ const express = require('express');
 
 const myRouter = express.Router();
 
-const alrasol_mohamed = require('../../models/alrasol_mohamed_2');
+const alrasol_mohamed_2 = require('../../models/alrasol_mohamed_2');
 
 
 myRouter.get('/', async (req, res) => {
 
-    const series = await alrasol_mohamed.find();
+    const series = await alrasol_mohamed_2.find();
 
     res.json(
         {
